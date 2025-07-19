@@ -7,7 +7,7 @@ const NavBar = () => {
   return (
     <div className="top-o left-0 w-full bg-[#F7F7F8] flex justify-center items-center h-15 px-20 shadow-neutral-100">
       <ul className="flex flex-row gap-15 items-center text-gray-800 font-medium">
-        <li className=" w-5 flex items-start"><FaApple className="text-3xl" /></li>
+        <li className="h-9 flex items-start"><FaApple className="text-3xl" /></li>
         {Choices.map((choice, index) =>(
             <li key={index} className="cursor-pointer hover:text-black">{choice}</li>
         ))}
