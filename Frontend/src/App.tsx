@@ -4,9 +4,10 @@ import Bg_Iphone from "./assets/BlackgroundIphone.png";
 import Bg_Macbook from "./assets/mcAir.png";
 import NavBar from "./components/NavBar";
 import Button from "./components/Button";
+import CartOverlay from "./components/CartOverlay";
 
 function App() {
-  const [count, setCount] = useState(0);
+  const [isCartOpen ,setIsCartOpen] = useState<boolean>(false);
   const Iphone: string[] = [
     "iPhone",
     "Hello! iPhone family",
@@ -19,10 +20,14 @@ function App() {
     "Learn more",
     "Buy now",
   ];
+  const toggleCart = () => {
+    setIsCartOpen((prev) => !prev);
+  };
   return (
     <>
-      <NavBar></NavBar>
+      <NavBar onClick={toggleCart} isCartOpen={isCartOpen} />
       <div className="flex flex-col">
+        {/* Header */}
         {/* iPhone */}
         <div className="w-full bg-[#F7F7F8] flex flex-col items-center pt-10 shadow-neutral-100">
           <h1 className="text-6xl font-bold text-black">{Iphone[0]}</h1>
