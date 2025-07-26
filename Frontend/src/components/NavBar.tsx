@@ -3,7 +3,7 @@ import { FaApple } from "react-icons/fa6";
 import { IoBagOutline } from "react-icons/io5";
 import { useNavigate } from "react-router-dom";
 import CartOverlay from "../components/CartOverlay";
-import { useState } from "react";
+
 
 interface NavBarProps {
   onClick: () => void;
@@ -12,7 +12,6 @@ interface NavBarProps {
 
 const NavBar = ({ onClick, isCartOpen }: NavBarProps) => {
   const navigate = useNavigate();
-  const [isClick, setIsClick] = useState<boolean>(false);
   const Choices: string[] = [
     "Shop",
     "Mac",
@@ -43,7 +42,7 @@ const NavBar = ({ onClick, isCartOpen }: NavBarProps) => {
   
   return (
     <div className=" w-full bg-white flex justify-center items-center h-15 px-20 shadow-neutral-100">
-      <ul className="flex flex-row gap-15 items-center text-gray-800 font-medium">
+      <ul className="flex flex-row gap-15 items-center text-gray-700 font-medium">
         <li className="h-9 flex items-start">
           <FaApple className="text-3xl" />
         </li>
